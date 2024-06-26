@@ -16,18 +16,23 @@ choice::~choice()
 void choice::on_pushButton_clicked()//snake
 {
     this->hide();
+    Game snake;
+    snake.setModal(true);
+    snake.exec();
 }
 
 
 void choice::on_pushButton_2_clicked()//pong
 {
     this->hide();
+
 }
 
 
 void choice::on_pushButton_3_clicked()//spr
 {
     this->hide();
+
 }
 
 

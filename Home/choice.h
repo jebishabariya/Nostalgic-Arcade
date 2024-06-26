@@ -1,6 +1,7 @@
 #ifndef CHOICE_H
 #define CHOICE_H
 
+#include <Game.h>
 #include <QDialog>
 
 namespace Ui {

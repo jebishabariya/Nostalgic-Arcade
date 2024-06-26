@@ -6,7 +6,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-//create a scene
+/*/create a scene
     QGraphicsScene * scene = new QGraphicsScene();
 //create
     QGraphicsRectItem * rect = new QGraphicsRectItem();
@@ -15,6 +15,6 @@ int main(int argc, char *argv[])
     scene->addItem(rect);
 //add a view
     QGraphicsView * view = new QGraphicsView(scene);
-    view->show();
+    view->show();*/
     return a.exec();
 }
