@@ -12,3 +12,12 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    this->hide();
+    choice ind;
+    ind.setModal(true);
+    ind.exec();
+}
+
