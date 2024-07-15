@@ -10,16 +10,16 @@ CONFIG += c++17
 
 SOURCES += \
     choice.cpp \
-    main.cpp \
-    mainwindow.cpp
+    gameboard.cpp \
+    main.cpp
 
 HEADERS += \
     choice.h \
-    mainwindow.h
+    gameboard.h \
+    snakemain.h
 
 FORMS += \
-    choice.ui \
-    mainwindow.ui
+    choice.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

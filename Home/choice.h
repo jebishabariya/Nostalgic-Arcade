@@ -1,14 +1,18 @@
 #ifndef CHOICE_H
 #define CHOICE_H
 
-#include <Game.h>
+//#include <D:/labProject/Nostalgic-Arcade/snakee/snake.h>
 #include <QDialog>
-
+#include <QWidget>
+#include<QProcess>
+#include <QPushButton>
+#include<snakemain.h>
+#include<gameboard.h>
 namespace Ui {
 class choice;
 }
 
-class choice : public QDialog
+class choice : public QDialog// public QWidget
 {
     Q_OBJECT
 

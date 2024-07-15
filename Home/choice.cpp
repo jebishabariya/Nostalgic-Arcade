@@ -16,9 +16,13 @@ choice::~choice()
 void choice::on_pushButton_clicked()//snake
 {
     this->hide();
-    Game snake;
-    snake.setModal(true);
-    snake.exec();
+    // Path to your game executable or script
+        QString gameFilePath = "D:\labProject\Nostalgic-Arcade\Home\snakemain.exe"; // Replace with actual path
+
+        // Create a process to run the game file
+        QProcess *process = new QProcess(this);
+        process->start(gameFilePath);
+
 }
 
 
