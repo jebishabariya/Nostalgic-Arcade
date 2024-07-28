@@ -1,0 +1,8 @@
+/home/melina/SPR/build/CMakeFiles/SPR.dir
+/home/melina/SPR/build/CMakeFiles/edit_cache.dir
+/home/melina/SPR/build/CMakeFiles/rebuild_cache.dir
+/home/melina/SPR/build/CMakeFiles/list_install_components.dir
+/home/melina/SPR/build/CMakeFiles/install.dir
+/home/melina/SPR/build/CMakeFiles/install/local.dir
+/home/melina/SPR/build/CMakeFiles/install/strip.dir
+/home/melina/SPR/build/CMakeFiles/SPR_autogen.dir

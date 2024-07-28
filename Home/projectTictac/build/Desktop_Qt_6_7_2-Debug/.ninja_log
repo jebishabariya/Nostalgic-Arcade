@@ -1,0 +1,20 @@
+# ninja log v6
+1	418	1721919019309299444	projectTictac_autogen/timestamp	e0d16a5dfdee7484
+1	418	1721919019309299444	projectTictac_autogen/mocs_compilation.cpp	e0d16a5dfdee7484
+1	418	1721919019309299444	/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/projectTictac_autogen/timestamp	e0d16a5dfdee7484
+1	418	1721919019309299444	/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/projectTictac_autogen/mocs_compilation.cpp	e0d16a5dfdee7484
+421	3109	1721919019317299513	CMakeFiles/projectTictac.dir/result.cpp.o	837ffdf85f2caec7
+420	3691	1721919019317299513	CMakeFiles/projectTictac.dir/projectTictac_autogen/mocs_compilation.cpp.o	5e8cbab75168cc6d
+420	3867	1721919019317299513	CMakeFiles/projectTictac.dir/main.cpp.o	c790e93482d72758
+3	245	1721919353933247318	projectTictac_autogen/timestamp	e0d16a5dfdee7484
+3	245	1721919353933247318	projectTictac_autogen/mocs_compilation.cpp	e0d16a5dfdee7484
+3	245	1721919353933247318	/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/projectTictac_autogen/timestamp	e0d16a5dfdee7484
+3	245	1721919353933247318	/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/projectTictac_autogen/mocs_compilation.cpp	e0d16a5dfdee7484
+245	1949	1721919353937247396	CMakeFiles/projectTictac.dir/main.cpp.o	c790e93482d72758
+245	2008	1721919353937247396	CMakeFiles/projectTictac.dir/projectTictac_autogen/mocs_compilation.cpp.o	5e8cbab75168cc6d
+246	2089	1721919353941247474	CMakeFiles/projectTictac.dir/mainwindowtictactoe.cpp.o	9c2b427a45320354
+2089	2350	1721919355781283409	projectTictac	1faa8ad3b78c0a9b
+5	32	1721997053682204339	projectTictac_autogen/timestamp	e0d16a5dfdee7484
+5	32	1721997053682204339	projectTictac_autogen/mocs_compilation.cpp	e0d16a5dfdee7484
+5	32	1721997053682204339	/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/projectTictac_autogen/timestamp	e0d16a5dfdee7484
+5	32	1721997053682204339	/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/projectTictac_autogen/mocs_compilation.cpp	e0d16a5dfdee7484

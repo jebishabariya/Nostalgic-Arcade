@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-ef0b91b997dfd2e975d6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "pingpong",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "pingpong::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pingpong-Debug-8a11046d5c2372bd72ce.json",
+					"name" : "pingpong",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pingpong_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pingpong_autogen-Debug-7522dc535ab23307b131.json",
+					"name" : "pingpong_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pingpong_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pingpong_autogen_timestamp_deps-Debug-83f0f9ec674cb5e020c1.json",
+					"name" : "pingpong_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/melina/pingpong/build/Desktop_Qt_6_7_2-Debug",
+		"source" : "/home/melina/pingpong"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

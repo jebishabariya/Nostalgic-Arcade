@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-09d6da8d6c68ac0b4b20.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "projectTictac",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "projectTictac::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-projectTictac-Debug-12664534d5a66e1cbf42.json",
+					"name" : "projectTictac",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "projectTictac_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-projectTictac_autogen-Debug-f8da59741981747e7494.json",
+					"name" : "projectTictac_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "projectTictac_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-projectTictac_autogen_timestamp_deps-Debug-3dccc95f738e8404cb38.json",
+					"name" : "projectTictac_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug",
+		"source" : "/home/melina/projectTictac"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

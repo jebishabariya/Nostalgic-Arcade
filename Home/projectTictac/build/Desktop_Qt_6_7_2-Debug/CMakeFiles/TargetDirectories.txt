@@ -1,0 +1,9 @@
+/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/projectTictac.dir
+/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/edit_cache.dir
+/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/rebuild_cache.dir
+/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/list_install_components.dir
+/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install.dir
+/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install/local.dir
+/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install/strip.dir
+/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/projectTictac_autogen_timestamp_deps.dir
+/home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/projectTictac_autogen.dir

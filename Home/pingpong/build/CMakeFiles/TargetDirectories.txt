@@ -1,0 +1,8 @@
+/home/melina/pingpong/build/CMakeFiles/pingpong.dir
+/home/melina/pingpong/build/CMakeFiles/edit_cache.dir
+/home/melina/pingpong/build/CMakeFiles/rebuild_cache.dir
+/home/melina/pingpong/build/CMakeFiles/list_install_components.dir
+/home/melina/pingpong/build/CMakeFiles/install.dir
+/home/melina/pingpong/build/CMakeFiles/install/local.dir
+/home/melina/pingpong/build/CMakeFiles/install/strip.dir
+/home/melina/pingpong/build/CMakeFiles/pingpong_autogen.dir

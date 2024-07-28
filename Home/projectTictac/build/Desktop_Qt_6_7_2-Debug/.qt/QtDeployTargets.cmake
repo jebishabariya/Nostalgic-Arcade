@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_projectTictac_FILE /home/melina/projectTictac/build/Desktop_Qt_6_7_2-Debug/projectTictac)
+set(__QT_DEPLOY_TARGET_projectTictac_TYPE EXECUTABLE)

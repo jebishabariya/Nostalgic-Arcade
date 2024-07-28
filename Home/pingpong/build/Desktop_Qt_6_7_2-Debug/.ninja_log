@@ -1,0 +1,17 @@
+# ninja log v6
+2	199	1722000323368795819	build.ninja	c6f1611a55a5cebb
+4	23	1722000094349753392	pingpong_autogen/timestamp	aa7091d356459915
+4	23	1722000094349753392	/home/melina/pingpong/build/Desktop_Qt_6_7_2-Debug/pingpong_autogen/timestamp	aa7091d356459915
+4	23	1722000094349753392	pingpong_autogen/mocs_compilation.cpp	aa7091d356459915
+603	5182	1721997738233367327	CMakeFiles/pingpong.dir/main.cpp.o	b613aaf77be5cde2
+4	23	1722000094349753392	/home/melina/pingpong/build/Desktop_Qt_6_7_2-Debug/pingpong_autogen/mocs_compilation.cpp	aa7091d356459915
+602	3889	1721997738233367327	CMakeFiles/pingpong.dir/pingpong_autogen/mocs_compilation.cpp.o	1ef569bbf9099bb
+603	4008	1721997738233367327	CMakeFiles/pingpong.dir/mainwindowpingpong.cpp.o	59b5d23d371f3773
+133	470	1722000094477759441	pingpong	d0dc71e5024f4745
+23	132	1722000094369754337	CMakeFiles/pingpong.dir/levelselectiondialog.cpp.o	e19a844e43661567
+20	51	1721997070169794394	CMakeFiles/pingpong.dir/pingpongresult.cpp.o	a9a1fb15b326e143
+3	18	1722000709811921375	pingpong_autogen/timestamp	aa7091d356459915
+3	18	1722000709811921375	pingpong_autogen/mocs_compilation.cpp	aa7091d356459915
+3	18	1722000709811921375	/home/melina/pingpong/build/Desktop_Qt_6_7_2-Debug/pingpong_autogen/timestamp	aa7091d356459915
+3	18	1722000709811921375	/home/melina/pingpong/build/Desktop_Qt_6_7_2-Debug/pingpong_autogen/mocs_compilation.cpp	aa7091d356459915
+18	398	1722000709827922172	pingpong	fbe37b0b70e5278f

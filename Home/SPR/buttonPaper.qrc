@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>buttonPaper.jpeg</file>
+    </qresource>
+</RCC>
