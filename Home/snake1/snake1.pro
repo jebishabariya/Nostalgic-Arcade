@@ -1,4 +1,4 @@
-QT += core gui multimedia
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -9,20 +9,13 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    choice.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    mode2.cpp
+    snakegame.cpp \
+    snakemain.cpp
 
 HEADERS += \
-    choice.h \
-    mainwindow.h \
-    mode2.h
+    snakegame.h
 
-FORMS += \
-    choice.ui \
-    mainwindow.ui \
-    mode2.ui
+FORMS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

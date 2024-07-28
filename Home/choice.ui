@@ -6,80 +6,184 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>516</width>
-    <height>405</height>
+    <width>1920</width>
+    <height>1080</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/res/bg5.png);</string>
+   <string notr="true">QDialog {
+ background-image: url(:/new/res/choose.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+QPushButton {
+    background-color:transparent;
+    border: none; 
+}</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>180</y>
-     <width>83</width>
-     <height>29</height>
+     <x>1030</x>
+     <y>378</y>
+     <width>304</width>
+     <height>87</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
-    <string>SNAKE</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>180</y>
-     <width>83</width>
-     <height>29</height>
+     <x>1030</x>
+     <y>666</y>
+     <width>304</width>
+     <height>87</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 0);</string>
+    <string notr="true">
+color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
-    <string>PONG</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>290</y>
-     <width>83</width>
-     <height>29</height>
+     <x>172</x>
+     <y>666</y>
+     <width>314</width>
+     <height>87</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
-    <string>SPR</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>290</y>
-     <width>83</width>
-     <height>29</height>
+     <x>172</x>
+     <y>378</y>
+     <width>304</width>
+     <height>87</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 0);</string>
    </property>
    <property name="text">
-    <string>TICTACTOE</string>
+    <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>400</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Imprint MT Shadow&quot;;
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>TIC TAC TOE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>1107</x>
+     <y>400</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Imprint MT Shadow&quot;;
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>SNAKE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>690</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Imprint MT Shadow&quot;;
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>SPR</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>1107</x>
+     <y>690</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Imprint MT Shadow&quot;;
+color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string>PONG</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>100</y>
+     <width>391</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 40pt &quot;Imprint MT Shadow&quot;;
+color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>CHOOSE!!!!!</string>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>pushButton_4</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>label_5</zorder>
  </widget>
  <resources/>
  <connections/>

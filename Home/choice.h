@@ -8,6 +8,8 @@
 #include <QPushButton>
 #include<snakemain.h>
 #include<gameboard.h>
+#include <QMediaPlayer>
+#include <QAudioInput>
 namespace Ui {
 class choice;
 }
@@ -30,7 +32,11 @@ private slots:
     void on_pushButton_4_clicked();
 
 private:
+    QMediaPlayer *bgMusic;
+    QAudioOutput *Vol;
     Ui::choice *ui;
+    void hideEvent(QHideEvent *event);
+    void closeEvent(QCloseEvent *event);
 };
 
 #endif // CHOICE_H
