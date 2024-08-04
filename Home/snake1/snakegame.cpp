@@ -37,13 +37,33 @@ void SnakeGame::initGame() {
 
 void SnakeGame::initObstacles() {
     obstacles.clear();
-    for (int i = 0; i < 10; ++i) {
-        int x = QRandomGenerator::global()->bounded(5, 100) * DOT_SIZE;
-        int y = QRandomGenerator::global()->bounded(5, 65) * DOT_SIZE;
-        obstacles.push_back(QRect(x, y, DOT_SIZE, DOT_SIZE));          // First box
-        obstacles.push_back(QRect(x + DOT_SIZE, y, DOT_SIZE, DOT_SIZE)); // Second box (to the right)
+    while (obstacles.size() < 20) { // Generate 20 non-overlapping obstacles
+        int obsx = QRandomGenerator::global()->bounded(5, 100) * DOT_SIZE;
+        int obsy = QRandomGenerator::global()->bounded(5, 65) * DOT_SIZE;
+        QRect newObstacle(obsx, obsy, DOT_SIZE, DOT_SIZE);
+
+        // Check for overlaps with existing obstacles and the snake
+        bool overlaps = false;
+        for (const QRect &obstacle : obstacles) {
+            if (newObstacle.intersects(obstacle)) {
+                overlaps = true;
+                break;
+            }
+        }
+        for (int i = 0; i < dots; ++i) {
+            QRect snakePart(x[i], y[i], DOT_SIZE, DOT_SIZE);
+            if (newObstacle.intersects(snakePart)) {
+                overlaps = true;
+                break;
+            }
+        }
+
+        if (!overlaps) {
+            obstacles.push_back(newObstacle);
+        }
     }
 }
+
 
 
 void SnakeGame::paintEvent(QPaintEvent *event) {

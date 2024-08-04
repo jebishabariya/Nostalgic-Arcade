@@ -1,0 +1,19 @@
+# ninja log v6
+3489	4540	7444872402093336	PROJECT2sem_autogen/EWIEGA46WW/qrc_Resource.cpp	68ca89596789124f
+26	2024	7444913493965099	build.ninja	ec13eaf3239f9c49
+1116	13646	7444912399130529	CMakeFiles/PROJECT2sem.dir/choice.cpp.obj	c97312150574d722
+77	1099	7444912388787470	C:/Users/jebi3/OneDrive/Documents/PROJECT2sem/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/PROJECT2sem_autogen/timestamp	90ed4d1b93b41dd3
+77	1099	7444912388787470	PROJECT2sem_autogen/timestamp	90ed4d1b93b41dd3
+77	1099	7444912388787470	PROJECT2sem_autogen/mocs_compilation.cpp	90ed4d1b93b41dd3
+3489	4540	7444872402093336	C:/Users/jebi3/OneDrive/Documents/PROJECT2sem/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/PROJECT2sem_autogen/EWIEGA46WW/qrc_Resource.cpp	68ca89596789124f
+77	1099	7444912388787470	C:/Users/jebi3/OneDrive/Documents/PROJECT2sem/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/PROJECT2sem_autogen/mocs_compilation.cpp	90ed4d1b93b41dd3
+3219	17525	7444900491212741	CMakeFiles/PROJECT2sem.dir/snakegame.cpp.obj	d65fae3efbfe12ce
+54198	65300	7444872899975956	CMakeFiles/PROJECT2sem.dir/PROJECT2sem_autogen/EWIEGA46WW/qrc_Resource.cpp.obj	8b9a3c102c93c7c1
+3281	21154	7444910324231148	CMakeFiles/PROJECT2sem.dir/PROJECT2sem_autogen/mocs_compilation.cpp.obj	4a7b32ea940cd001
+117	151	7444872300849567	clean	577b940aee94fbd7
+854	11135	7444873283468611	CMakeFiles/PROJECT2sem.dir/main.cpp.obj	fbc5db0a88825afe
+1105	10600	7444912399014722	CMakeFiles/PROJECT2sem.dir/mainwindow.cpp.obj	4506c0a9eb0f1298
+15717	17928	7444901343372558	PROJECT2sem.exe	490b56dfd24eb8d
+16	116	7444872299847339	CMakeFiles/clean.additional	baedbe210acaa455
+1128	13514	7444912399250875	CMakeFiles/PROJECT2sem.dir/leadersnake.cpp.obj	337e670778aacf6e
+1143	11031	7444912399391472	CMakeFiles/PROJECT2sem.dir/mainwindowpingpong.cpp.obj	a07b70f9a9bbbc6f

@@ -1,0 +1,9 @@
+D:/labProject/Nostalgic-Arcade/Home/SPR/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/SPR.dir
+D:/labProject/Nostalgic-Arcade/Home/SPR/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+D:/labProject/Nostalgic-Arcade/Home/SPR/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+D:/labProject/Nostalgic-Arcade/Home/SPR/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+D:/labProject/Nostalgic-Arcade/Home/SPR/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+D:/labProject/Nostalgic-Arcade/Home/SPR/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+D:/labProject/Nostalgic-Arcade/Home/SPR/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+D:/labProject/Nostalgic-Arcade/Home/SPR/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/SPR_autogen_timestamp_deps.dir
+D:/labProject/Nostalgic-Arcade/Home/SPR/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/SPR_autogen.dir

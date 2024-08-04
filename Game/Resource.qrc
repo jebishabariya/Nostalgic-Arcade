@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/res1">
+        <file>background (1).png</file>
+        <file>bg2.png</file>
+        <file>bg3.png</file>
+        <file>bg4.png</file>
+        <file>bg5.png</file>
+        <file>bgmusic.mp3</file>
+        <file>ch1.png</file>
+        <file>ch2.png</file>
+        <file>choose.png</file>
+    </qresource>
+</RCC>

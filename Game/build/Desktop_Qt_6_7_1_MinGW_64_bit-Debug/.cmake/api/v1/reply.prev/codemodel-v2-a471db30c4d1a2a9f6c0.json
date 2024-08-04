@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-fb831914ecdf6b37442f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PROJECT2sem",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "PROJECT2sem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PROJECT2sem-Debug-5c21a38730495cfce380.json",
+					"name" : "PROJECT2sem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PROJECT2sem_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PROJECT2sem_autogen-Debug-cc001e8df1cf3d03df18.json",
+					"name" : "PROJECT2sem_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PROJECT2sem_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PROJECT2sem_autogen_timestamp_deps-Debug-4fd8bf9bc0f814e5c7de.json",
+					"name" : "PROJECT2sem_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/jebi3/OneDrive/Documents/PROJECT2sem/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug",
+		"source" : "C:/Users/jebi3/OneDrive/Documents/PROJECT2sem"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
