@@ -9,5 +9,8 @@
         <file>ch1.png</file>
         <file>ch2.png</file>
         <file>choose.png</file>
+        <file>snakeeat.mp3</file>
+        <file>snakewall.mp3</file>
+        <file>snakefull.mp3</file>
     </qresource>
 </RCC>

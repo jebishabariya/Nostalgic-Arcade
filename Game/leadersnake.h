@@ -1,9 +1,11 @@
 #ifndef LEADERSNAKE_H
 #define LEADERSNAKE_H
+
 #include"snakegame.h"
 #include <QDialog>
 #include <QListWidget>
-class SnakeGame;
+#include <QSqlDatabase>
+#include "databaseconnect.h"
 namespace Ui {
 class LeaderSnake;
 }
@@ -15,20 +17,24 @@ class LeaderSnake : public QDialog
 public:
     explicit LeaderSnake(QWidget *parent = nullptr);
     ~LeaderSnake();
+    void displayLeaderboard();
+    void loadLeaderboard();
 public slots:
     void onGameOver(int score); // Slot to handle the game over signal
-
+    void setHighScores();
 
 private slots:
-    void on_pushButton_clicked();
+    void addScore(const QString &name, int score);
 
+    void on_pushButton_clicked();
     void on_pushButton_2_clicked();
 
 private:
-    void addScore(const QString &name, int score);
-    void setHighScores();
+    void initializeDatabase();
     Ui::LeaderSnake *ui;
+     QSqlDatabase db;
     QString playerName;
+
 };
 
 #endif // LEADERSNAKE_H

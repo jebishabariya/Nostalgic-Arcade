@@ -5,7 +5,7 @@
 #include <QProcess>
 #include "snakegame.h"
 #include "leadersnake.h"
-#include "mainwindowpingpong.h"
+
 
 choice::choice(QWidget *parent)
     : QDialog(parent)
@@ -43,8 +43,8 @@ void choice::on_pushButton_clicked()//snake
 void choice::on_pushButton_2_clicked()//pong
 {
     this->hide();
-    MainWindowPingPong *pingpong = new MainWindowPingPong();
-    pingpong->show();
+   // MainWindowPingPong *pingpong = new MainWindowPingPong();
+    //pingpong->show();
 }
 
 

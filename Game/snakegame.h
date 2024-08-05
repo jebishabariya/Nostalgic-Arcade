@@ -11,6 +11,9 @@
 #include <QRect>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QMediaPlayer>
+#include <QAudioOutput>
+#include "leadersnake.h"
 
 class SnakeGame : public QMainWindow {
     Q_OBJECT
@@ -23,10 +26,12 @@ public:
 
 protected:
     void paintEvent(QPaintEvent *event) override;
-    void timerEvent(QTimerEvent *event) override;
+  //void timerEvent(QTimerEvent *event) override;
     void keyPressEvent(QKeyEvent *event) override;
 signals:
     void gameOver(int score);
+private slots:
+    void onTimeout();
 private:
     void initGame();
     void doDrawing();
@@ -34,8 +39,11 @@ private:
     void move();
     void locateApple();
     void initObstacles();
-    void endGame(int score);
+    void endGame();
+    void stopGame();
     std::vector<QRect> obstacles;
+
+    QTimer *gameTimer;
 
     static const int B_WIDTH = 1000;
     static const int B_HEIGHT = 700;
@@ -66,10 +74,12 @@ private:
     QImage apple;
     QImage obstacle;
 
-    QPushButton *restartButton;
-    QPushButton *quitButton;
-    QVBoxLayout *layout;
-    QWidget *centralWidget;
+    QMediaPlayer *eatSound;
+    QAudioOutput *eatAudioOutput;
+    QMediaPlayer *collisionSound;
+    QAudioOutput *collisionAudioOutput;
+    QMediaPlayer *backgroundMusic;
+    QAudioOutput *backgroundAudioOutput;
 };
 
 #endif // SNAKEGAME_H

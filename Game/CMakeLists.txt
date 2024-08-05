@@ -27,6 +27,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         choice.h choice.cpp choice.ui
         snakegame.h snakegame.cpp
         leadersnake.h leadersnake.cpp leadersnake.ui
+        databaseconnect.h databaseconnect.cpp
 
 
 

@@ -7,13 +7,62 @@
 #include <cmath>
 
 SnakeGame::SnakeGame(QWidget *parent) : QMainWindow(parent) {
+
     setStyleSheet("background-color:green;"); // Set background color to black
     setFixedSize(B_WIDTH, B_HEIGHT); // Set fixed size of the window
+
+    eatSound = new QMediaPlayer(this);
+    eatAudioOutput = new QAudioOutput(this);
+    eatSound->setAudioOutput(eatAudioOutput);
+    eatSound->setSource(QUrl("qrc:/res1/snakeeat.mp3"));
+
+    collisionSound = new QMediaPlayer(this);
+    collisionAudioOutput = new QAudioOutput(this);
+    collisionSound->setAudioOutput(collisionAudioOutput);
+    collisionSound->setSource(QUrl("qrc:/res1/snakewall.mp3"));
+
+    // Initialize background music
+    backgroundMusic = new QMediaPlayer(this);
+    backgroundAudioOutput = new QAudioOutput(this);
+    backgroundMusic->setAudioOutput(backgroundAudioOutput);
+    backgroundMusic->setSource(QUrl("qrc:/res1/snakefull.mp3"));
+    backgroundAudioOutput->setVolume(0.3);  // Adjust volume as needed
+    backgroundMusic->setLoops(QMediaPlayer::Infinite);  // Loop indefinitely
+    backgroundMusic->play();
+
+    gameTimer = new QTimer(this);  // Initialize the game timer
+    connect(gameTimer, &QTimer::timeout, this, &SnakeGame::onTimeout);
+
     initGame(); // Initialize the game
 }
 
-SnakeGame::~SnakeGame() {}
+SnakeGame::~SnakeGame() {
+    if (backgroundMusic) {
+       backgroundMusic->stop(); // Stop playback
+        delete backgroundMusic; // Delete the player
+    }
+    if (backgroundAudioOutput) {
+        delete backgroundAudioOutput; // Delete the audio output
+    }
+    stopGame();
+}
+void SnakeGame::stopGame() {
+    if (gameTimer && gameTimer->isActive()) {
+        gameTimer->stop();
 
+    delete gameTimer;
+    gameTimer = nullptr; // Prevents dangling pointer issues
+    }
+}
+void SnakeGame::onTimeout() {
+
+    if (inGame) {
+        checkCollision();
+        move();
+        repaint();
+    }
+    // Ensure the screen updates
+}
 void SnakeGame::initGame() {
     dots = 3;
     score = 0;
@@ -32,7 +81,7 @@ void SnakeGame::initGame() {
     downDirection = false;
     inGame = true;
 
-    timerId = startTimer(DELAY);
+    gameTimer->start(DELAY);
 }
 
 void SnakeGame::initObstacles() {
@@ -118,7 +167,8 @@ void SnakeGame::doDrawing() {
         qp.drawText(10, 20, scoreText);
 
     } else {
-        // Game Over screen
+        endGame();
+        /* Game Over screen
         QString message = "Game Over";
         QFont font("Courier", 15, QFont::DemiBold);
         QFontMetrics fm(font);
@@ -134,21 +184,12 @@ void SnakeGame::doDrawing() {
 
         QString scoreText = QString("Final Score: %1").arg(score);
         int scoreTextWidth = fm.horizontalAdvance(scoreText);
-        qp.drawText(-scoreTextWidth / 2, 20, scoreText);
-        endGame(score);
+        qp.drawText(-scoreTextWidth / 2, 20, scoreText);*/
     }
 }
 
 
-void SnakeGame::timerEvent(QTimerEvent *event) {
-    Q_UNUSED(event);
 
-    if (inGame) {
-        checkCollision();
-        move();
-        repaint(); // Ensure the screen updates
-    }
-}
 
 void SnakeGame::keyPressEvent(QKeyEvent *event) {
     int key = event->key();
@@ -209,7 +250,9 @@ void SnakeGame::checkCollision() {
     // Check for collision with self
     for (int z = dots - 1; z > 0; z--) {
         if ((x[0] == x[z]) && (y[0] == y[z])) {
+            collisionSound->play();
             inGame = false;
+            endGame();
         }
     }
 
@@ -217,25 +260,32 @@ void SnakeGame::checkCollision() {
     QRect snakeHeadRect(x[0], y[0], DOT_SIZE, DOT_SIZE);
     for (const QRect &obstacleRect : obstacles) {
         if (snakeHeadRect.intersects(obstacleRect)) {
+            collisionSound->play();
             inGame = false; // End game on collision
+            endGame();
         }
     }
 
     // Check for collision with boundaries
     if (y[0] >= (B_HEIGHT - 1) || y[0] < 25 ||
         x[0] >= (B_WIDTH - 1) || x[0] < 0) {
+        collisionSound->play();
         inGame = false;
+        endGame();
     }
 
     // Check for collision with food
     if ((x[0] == apple_x) && (y[0] == apple_y)) {
+        eatSound->play();
         dots++;
         score += 1;
         locateApple();
     }
 
     if (!inGame) {
+        endGame();
         killTimer(timerId);
+        emit gameOver(score);
     }
 }
 
@@ -254,7 +304,29 @@ void SnakeGame::locateApple() {
         }
     }
 }
-void SnakeGame::endGame(int finalScore)
+void SnakeGame::endGame()
 {
-    emit gameOver(finalScore); // Emit the score
+    QFont font("Arial", 30, QFont::Bold);
+    QFontMetrics metrics(font);
+    int textWidth = metrics.horizontalAdvance("Game Over");
+    int textHeight = metrics.height();
+    int x = (width() - textWidth) / 2;
+    int y = height() / 2;
+
+    QPainter qp(this);
+    qp.setFont(font);
+    qp.setPen(Qt::white);
+    qp.drawText(x, y, "Game Over");
+
+    // Create an instance of LeaderSnake and call onGameOver
+    emit gameOver(score);
+
+    stopGame(); // Ensure the game timer is stopped
+   // if (gameTimer->isActive()) {
+     //   gameTimer->stop();
+   // }
+}
+
+int SnakeGame::getScore() const {
+    return score;
 }

@@ -5,19 +5,43 @@
 #include <QSqlError>
 #include <QVariant>
 #include <QDebug>
-
+#include <vector>
+#include <QString>
 
 LeaderSnake::LeaderSnake(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::LeaderSnake)
 {
     ui->setupUi(this);
-     setHighScores();
+    initializeDatabase();
+    setHighScores();
 }
 
 LeaderSnake::~LeaderSnake()
 {
     delete ui;
+}
+void LeaderSnake::initializeDatabase()
+{
+     db = DatabaseConnect::instance().database();
+    /*if (QSqlDatabase::contains(QSqlDatabase::defaultConnection)) {
+        db = QSqlDatabase::database(QSqlDatabase::defaultConnection);
+    } else {
+        db = QSqlDatabase::addDatabase("QSQLITE");
+        db.setDatabaseName("snakehighscores.db");
+
+        if (!db.open()) {
+            qCritical() << "Failed to connect to database:" << db.lastError().text();
+            return;
+        }
+
+        QSqlQuery query;
+        if (!query.exec("CREATE TABLE IF NOT EXISTS highscores (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, score INTEGER NOT NULL);")) {
+            qCritical() << "Failed to create table:" << query.lastError().text();
+        } else {
+            qDebug() << "Database initialized and table created.";
+        }
+    }*/
 }
 void LeaderSnake::addScore(const QString &name, int score)
 {
@@ -34,11 +58,10 @@ void LeaderSnake::addScore(const QString &name, int score)
     }
 
     // Reload high scores
-    setHighScores();
+   setHighScores();
 }
 void LeaderSnake::setHighScores()
 {
-    // Load high scores from the database
     QSqlQuery query("SELECT name, score FROM highscores ORDER BY score DESC LIMIT 5");
 
     if (!query.exec()) {
@@ -46,7 +69,7 @@ void LeaderSnake::setHighScores()
         return;
     }
 
-    ui->listWidget->clear();
+    ui->listWidget->clear(); // Clear the list widget before adding new items
     while (query.next()) {
         QString name = query.value(0).toString();
         int score = query.value(1).toInt();
@@ -56,17 +79,29 @@ void LeaderSnake::setHighScores()
 }
 void LeaderSnake::onGameOver(int score)
 {
-    // Use the stored playerName to add the score to the database
+    qDebug() << "Game over received with score:" << score;
+    qDebug() << "Player name in onGameOver:" << playerName;
 
-        addScore(playerName, score);
+    if (playerName.isEmpty()) {
+        qCritical() << "Player name is still empty in onGameOver.";
+    }
 
-    ui->lineEdit->clear();
+    addScore(playerName, score);
+    setHighScores(); // Call setHighScores to refresh the list
+     ui->lineEdit->clear();
 }
 void LeaderSnake::on_pushButton_clicked()
 {
-    this->hide();
+    QString name = ui->lineEdit->text().trimmed(); // Get the player name and trim any extra spaces
+    if (name.isEmpty()) {
+        qDebug() << "Player name is empty.";
+        return; // Do not start the game if the player name is empty
+    }
+    playerName = name; // Set the player name
+    qDebug() << "Player name set to:" << playerName;
+
+    this->hide(); // Hide the LeaderSnake dialog
     SnakeGame *snakeGame = new SnakeGame();
-    // Connect the gameOver signal to the onGameOver slot
     connect(snakeGame, &SnakeGame::gameOver, this, &LeaderSnake::onGameOver);
     snakeGame->show();
 }
@@ -75,6 +110,14 @@ void LeaderSnake::on_pushButton_clicked()
 void LeaderSnake::on_pushButton_2_clicked()
 {
     playerName = ui->lineEdit->text();
-   // addScore(playerName,score)
+    if (playerName.isEmpty()) {
+        qDebug() << "Player name is empty.";
+        return; // Do not proceed if the player name is empty
+    }
+   // QString name = playerName;
+    qDebug() << "Player name set to:" << playerName;
 }
+
+
+
 
